@@ -90,15 +90,87 @@ h6 {
 }
 
 @font-face {
-  font-family: "_FONT_";
-  src: url("../src/fonts/_FONT_/_FONT_.ttf");
+  font-family: "Roboto";
+  src: url("../src/fonts/Roboto/Roboto-Black.ttf");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat/montserrat.woff2") format("woff2"), url("../src/fonts/Montserrat/montserrat.woff") format("woff"), url("../src/fonts/Montserrat/montserrat.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat/Montserrat-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat/montserratbold.woff2") format("woff2"), url("../src/fonts/Montserrat/montserratbold.woff") format("woff"), url("../src/fonts/Montserrat/montserratbold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat/mantserratblack.woff2") format("woff2"), url("../src/fonts/Montserrat/mantserratblack.woff") format("woff"), url("../src/fonts/Montserrat/mantserratblack.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../src/fonts/Lato/latoregular.woff2") format("woff2"), url("../src/fonts/Lato/latoregular.woff") format("woff"), url("../src/fonts/Lato/latoregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../src/fonts/Lato/latomedium.woff2") format("woff2"), url("../src/fonts/Lato/latomedium.woff") format("woff"), url("../src/fonts/Lato/latomedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../src/fonts/Lato/latosemibold.woff2") format("woff2"), url("../src/fonts/Lato/latosemibold.woff") format("woff"), url("../src/fonts/Lato/latosemibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../src/fonts/Lato/latobold.woff2") format("woff2"), url("../src/fonts/Lato/latobold.woff") format("woff"), url("../src/fonts/Lato/latobold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../src/fonts/Lato/latoitalic.woff2") format("woff2"), url("../src/fonts/Lato/latoitalic.woff") format("woff"), url("../src/fonts/Lato/latoitalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 body {
-  font-family: "_FONT_";
+  font-family: "Lato", sans-serif;
   font-size: 16px;
   color: #000000;
 }
