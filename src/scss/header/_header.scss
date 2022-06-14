@@ -1,0 +1,45 @@
+.header {
+    position: absolute;
+    width: 100%;
+    min-height: 110px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    &__logo {
+        margin-right: auto;
+    }
+
+    &__nav {
+        margin-right: 45px;
+    }
+
+    &__button {
+        background: none;
+    }
+
+    &__burger {
+        margin-left: 30px;
+        width: 30px;
+        height: 30px;
+        background: none;
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 56px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

@@ -8,6 +8,8 @@
 @import "variables";
 
 // Остальное
+@import "../components/logo";
+@import "../components/burger-menu";
 
 body {
     font-family: $font-1;
@@ -22,13 +24,7 @@ body {
 }
 
 .container {
-    max-width: $width_desktop_2;
+    max-width: $width_desktop_2 + 80px;
     margin: 0 auto;
-    padding: 0 12px;
-}
-
-.logo {
-    &__img {
-        width: 100%;
-    }
+    padding: 0 40px;
 }
