@@ -1,78 +1,77 @@
 * {
-    padding: 0;
-    margin: 0;
-    border: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 *,
 *:before,
 *:after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :focus,
 :active {
-    outline: none;
+  outline: none;
 }
 
 a:focus,
 a:active {
-    outline: none;
+  outline: none;
 }
 
 nav,
 footer,
 header,
 aside {
-    display: block;
+  display: block;
 }
 
 html,
 body {
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 input,
 button,
 textarea {
-    font-family: inherit;
+  font-family: inherit;
 }
 
 input::-ms-clear {
-    display: none;
+  display: none;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+  padding: 0;
+  border: 0;
 }
 
 a,
 a:visited {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul li {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 h1,
@@ -81,172 +80,305 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: inherit;
-    font-weight: 400;
+  font-size: inherit;
+  font-weight: 400;
 }
 
 .wrapper {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 @font-face {
-    font-family: "Roboto";
-    src: url("../src/fonts/Roboto/Roboto-Black.ttf");
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
+  font-family: "Roboto";
+  src: url("../src/fonts/Roboto/Roboto-Black.ttf");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
 }
-
 @font-face {
-    font-family: "Montserrat";
-    src: url("../src/fonts/Montserrat/montserrat.woff2") format("woff2"), url("../src/fonts/Montserrat/montserrat.woff") format("woff"),
-        url("../src/fonts/Montserrat/montserrat.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat/montserrat.woff2") format("woff2"), url("../src/fonts/Montserrat/montserrat.woff") format("woff"), url("../src/fonts/Montserrat/montserrat.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
 }
-
 @font-face {
-    font-family: "Montserrat";
-    src: url("../src/fonts/Montserrat/Montserrat-SemiBold.ttf");
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat/Montserrat-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
 }
-
 @font-face {
-    font-family: "Montserrat";
-    src: url("../src/fonts/Montserrat/montserratbold.woff2") format("woff2"), url("../src/fonts/Montserrat/montserratbold.woff") format("woff"),
-        url("../src/fonts/Montserrat/montserratbold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat/montserratbold.woff2") format("woff2"), url("../src/fonts/Montserrat/montserratbold.woff") format("woff"), url("../src/fonts/Montserrat/montserratbold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
 }
-
 @font-face {
-    font-family: "Montserrat";
-    src: url("../src/fonts/Montserrat/mantserratblack.woff2") format("woff2"), url("../src/fonts/Montserrat/mantserratblack.woff") format("woff"),
-        url("../src/fonts/Montserrat/mantserratblack.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
+  font-family: "Montserrat";
+  src: url("../src/fonts/Montserrat/mantserratblack.woff2") format("woff2"), url("../src/fonts/Montserrat/mantserratblack.woff") format("woff"), url("../src/fonts/Montserrat/mantserratblack.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
 }
-
 @font-face {
-    font-family: "Lato";
-    src: url("../src/fonts/Lato/latoregular.woff2") format("woff2"), url("../src/fonts/Lato/latoregular.woff") format("woff"),
-        url("../src/fonts/Lato/latoregular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Lato";
+  src: url("../src/fonts/Lato/latoregular.woff2") format("woff2"), url("../src/fonts/Lato/latoregular.woff") format("woff"), url("../src/fonts/Lato/latoregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
-    font-family: "Lato";
-    src: url("../src/fonts/Lato/latomedium.woff2") format("woff2"), url("../src/fonts/Lato/latomedium.woff") format("woff"),
-        url("../src/fonts/Lato/latomedium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Lato";
+  src: url("../src/fonts/Lato/latomedium.woff2") format("woff2"), url("../src/fonts/Lato/latomedium.woff") format("woff"), url("../src/fonts/Lato/latomedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
-    font-family: "Lato";
-    src: url("../src/fonts/Lato/latosemibold.woff2") format("woff2"), url("../src/fonts/Lato/latosemibold.woff") format("woff"),
-        url("../src/fonts/Lato/latosemibold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Lato";
+  src: url("../src/fonts/Lato/latosemibold.woff2") format("woff2"), url("../src/fonts/Lato/latosemibold.woff") format("woff"), url("../src/fonts/Lato/latosemibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
-    font-family: "Lato";
-    src: url("../src/fonts/Lato/latobold.woff2") format("woff2"), url("../src/fonts/Lato/latobold.woff") format("woff"),
-        url("../src/fonts/Lato/latobold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Lato";
+  src: url("../src/fonts/Lato/latobold.woff2") format("woff2"), url("../src/fonts/Lato/latobold.woff") format("woff"), url("../src/fonts/Lato/latobold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
-    font-family: "Lato";
-    src: url("../src/fonts/Lato/latoitalic.woff2") format("woff2"), url("../src/fonts/Lato/latoitalic.woff") format("woff"),
-        url("../src/fonts/Lato/latoitalic.ttf") format("truetype");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Lato";
+  src: url("../src/fonts/Lato/latoitalic.woff2") format("woff2"), url("../src/fonts/Lato/latoitalic.woff") format("woff"), url("../src/fonts/Lato/latoitalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
-
 .logo {
-    display: block;
-    position: relative;
-    width: 160px;
-    height: 36px;
-    background: url("../src/img/logo/logo.svg") center center/contain no-repeat;
+  display: block;
+  position: relative;
+  width: 160px;
+  height: 36px;
+  background: url("../src/img/logo/logo.svg") center center/contain no-repeat;
+}
+
+.burger-menu {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.burger-menu__box {
+  display: block;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.burger-menu__box::before, .burger-menu__box::after {
+  content: "";
+}
+.burger-menu__line, .burger-menu__box::before, .burger-menu__box::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border: 1px solid #000000;
+  background: #000000;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.burger-menu__line {
+  top: 0;
+}
+.burger-menu__box::before {
+  top: 50%;
+  transform: translate(0, -50%);
+  transform-origin: center;
+}
+.burger-menu__box::after {
+  bottom: 0;
+}
+.burger-menu.active .burger-menu__box::before {
+  transform: translate(0, -50%) scale(0);
+}
+.burger-menu.active .burger-menu__line {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
+}
+.burger-menu.active .burger-menu__box::after {
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg) scale(1.2);
 }
 
 body {
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    color: #000000;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #000000;
 }
 
 .wrapper {
-    overflow: hidden;
-    min-height: 100vh;
-    position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
 }
 
 .container {
-    max-width: 1330px;
-    margin: 0 auto;
-    padding: 0 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.lock-burger {
+  overflow: hidden;
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 110px;
+}
+@media (max-width: 900px) {
+  .header {
+    position: fixed;
+    z-index: 996;
+  }
+  .header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 997;
+    background: #ffffff;
+  }
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.header__logo {
+  margin-right: auto;
+  position: relative;
+  z-index: 999;
+}
+.header__nav {
+  margin-right: 45px;
+  z-index: 996;
+}
+.header__button {
+  background: none;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 118.75%;
+  color: #212121;
+  padding: 11px 32px;
+  border: 1px solid #212121;
+  border-radius: 5px;
+  z-index: 999;
+  position: relative;
+}
+.header__burger {
+  margin-left: 30px;
+  width: 30px;
+  height: 25px;
+  background: none;
+  display: none;
+  z-index: 999;
+  position: relative;
+}
+@media (max-width: 900px) {
+  .header__burger {
+    display: block;
+  }
+}
+
+.nav {
+  position: relative;
+}
+@media (max-width: 900px) {
+  .nav {
     position: absolute;
     width: 100%;
-    min-height: 110px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transform: translateY(-200%);
+    transition-property: opacity, transform;
+    transition-duration: 0.3s, 0s;
+    transition-delay: 0s, 0.3s;
+  }
+  .nav.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition-property: opacity, transform;
+    transition-duration: 0.3s, 0s;
+    transition-delay: 0s, 0s;
+  }
 }
-
-.header__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding-top: 36px;
-    padding-bottom: 36px;
-}
-
-.header__logo {
-    margin-right: auto;
-}
-
-.header__nav {
-    margin-right: 45px;
-}
-
-.header__button {
-    background: none;
-}
-
-.header__burger {
-    margin-left: 30px;
-    background: none;
-}
-
 .nav__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  display: flex;
 }
-
+@media (max-width: 900px) {
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.25);
+    background: #ffffff;
+    transform: translateY(-100%);
+    transition: all 0.3s;
+  }
+}
+@media (max-width: 900px) {
+  .nav.active .nav__list {
+    transform: translateY(0);
+  }
+}
 .nav__item {
-    margin-right: 56px;
+  margin-right: 56px;
 }
-
 .nav__item:last-child {
+  margin-right: 0;
+}
+@media (max-width: 900px) {
+  .nav__item {
     margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+.nav__button {
+  background: none;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 118.75%;
+  color: #212121;
+}
+@media (max-width: 900px) {
+  .nav__button {
+    font-size: 32px;
+  }
 }

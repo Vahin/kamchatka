@@ -24,7 +24,11 @@ body {
 }
 
 .container {
-    max-width: $width_desktop_2 + 80px;
+    max-width: $width_desktop_2;
     margin: 0 auto;
     padding: 0 40px;
+}
+
+.lock-burger {
+    overflow: hidden;
 }

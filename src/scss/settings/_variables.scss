@@ -1,9 +1,9 @@
 // Брейкпоинты
 $width_desktop_1: 0;
-$width_desktop_2: 1250px;
+$width_desktop_2: 1300px;
 $width_desktop_3: 0;
 
-$width_mobile_1: 0;
+$width_mobile_1: 900px;
 $width_mobile_2: 0;
 $width_mobile_3: 0;
 
@@ -17,34 +17,34 @@ $fsz: 16px;
 
 // Цвета
 $black_1: #000000;
+$black_2: #212121;
+$black_3: rgba(0, 0, 0, 0.25);
 
-$white_1: #fff;
+$white_1: #ffffff;
+$white_2: rgba(255, 255, 255, 0.2);
 
 $gray_1: #4f5665;
 
 $green_1: #147e45;
 
 // Тени
-$shadow_green_1: 0px 4px 20px rgba(13, 77, 42, 0.33);
+$shadow_black_1: 0px 6px 14px $black_3;
 
 //Скорость анимации
 $transition: 0.3s;
 
 $transition_burger: $transition;
+$transition_menu: $transition;
 
 //Миксины
 
-@mixin fonttype_1($color: $black_2, $lheight: 117%) {
+@mixin fonttype_text($color: $black_2, $lheight: 118.75%) {
     font-family: $font_1;
     font-style: normal;
-    font-weight: 500;
-    font-size: $fsz * 2.1875; // 35px
+    font-weight: 400;
+    font-size: $fsz; // 16px
     line-height: $lheight;
     color: $color;
-
-    @media (max-width: $width_mobile_1) {
-        font-size: $fsz * 1.375; // 22px
-    }
 }
 
 @mixin fonttype_2($color: $black_2, $lheight: 117%) {

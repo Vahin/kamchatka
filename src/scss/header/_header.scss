@@ -1,7 +1,26 @@
 .header {
     position: absolute;
+    top: 0;
+    left: 0;
+
     width: 100%;
     min-height: 110px;
+
+    @media (max-width: $width_mobile_1) {
+        position: fixed;
+        z-index: 996;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 997;
+            background: $white_1;
+        }
+    }
 
     &__container {
         display: flex;
@@ -12,27 +31,89 @@
 
     &__logo {
         margin-right: auto;
+        position: relative;
+        z-index: 999;
     }
 
     &__nav {
         margin-right: 45px;
+        z-index: 996;
     }
 
     &__button {
         background: none;
+        @include fonttype_text();
+        padding: 11px 32px;
+        border: 1px solid $black_2;
+        border-radius: 5px;
+        z-index: 999;
+        position: relative;
     }
 
     &__burger {
         margin-left: 30px;
         width: 30px;
-        height: 30px;
+        height: 25px;
         background: none;
+        display: none;
+        z-index: 999;
+        position: relative;
+
+        @media (max-width: $width_mobile_1) {
+            display: block;
+        }
     }
 }
 
 .nav {
+    position: relative;
+
+    @media (max-width: $width_mobile_1) {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        overflow-y: scroll;
+        background: $black_3;
+        opacity: 0;
+        transform: translateY(-200%);
+
+        transition-property: opacity, transform;
+        transition-duration: $transition_menu, 0s;
+        transition-delay: 0s, $transition_menu;
+
+        &.active {
+            opacity: 1;
+            transform: translateY(0);
+
+            transition-property: opacity, transform;
+            transition-duration: $transition_menu, 0s;
+            transition-delay: 0s, 0s;
+        }
+    }
+
     &__list {
         display: flex;
+
+        @media (max-width: $width_mobile_1) {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 150px;
+            padding-bottom: 50px;
+
+            box-shadow: $shadow_black_1;
+            background: $white_1;
+            transform: translateY(-100%);
+            transition: all $transition_menu;
+        }
+    }
+
+    &.active &__list {
+        @media (max-width: $width_mobile_1) {
+            transform: translateY(0);
+        }
     }
 
     &__item {
@@ -40,6 +121,21 @@
 
         &:last-child {
             margin-right: 0;
+        }
+
+        @media (max-width: $width_mobile_1) {
+            margin-right: 0;
+
+            margin-bottom: 30px;
+        }
+    }
+
+    &__button {
+        background: none;
+        @include fonttype_text();
+
+        @media (max-width: $width_mobile_1) {
+            font-size: $fsz * 2;
         }
     }
 }
