@@ -5,10 +5,10 @@
 
     width: 100%;
     min-height: 110px;
+    z-index: 996;
 
     @media (max-width: $width_mobile_1) {
         position: fixed;
-        z-index: 996;
 
         &::after {
             content: "";

@@ -26,6 +26,9 @@ $white_2: rgba(255, 255, 255, 0.2);
 $orange_1: #fb8b62;
 $orange_2: #f47648;
 
+$gray_1: #bdbdbd;
+$gray-2: #dfdfdf;
+
 // Тени
 $shadow_black_1: 0px 6px 14px $black_3;
 
@@ -35,6 +38,8 @@ $transition: 0.3s;
 $transition_burger: $transition;
 $transition_menu: $transition;
 $transition_hover: $transition;
+$transition_slider: $transition;
+$transition_socials: $transition;
 
 //Миксины
 
@@ -56,21 +61,11 @@ $transition_hover: $transition;
     color: $color;
 }
 
-@mixin fonttype_2($color: $black_2, $lheight: 117%) {
+@mixin fonttype_text_small($color: $gray_1, $lheight: 171%) {
     font-family: $font_1;
     font-style: normal;
-    font-weight: 500;
-    font-size: $fsz * 1.375; // 22px
+    font-weight: 400;
+    font-size: $fsz * 0.875; // 14px
     line-height: $lheight;
     color: $color;
-
-    font-family: "Rubik";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 19px;
-    line-height: 23px;
-
-    @media (max-width: $width_mobile_1) {
-        font-size: $fsz; // 16px
-    }
 }
