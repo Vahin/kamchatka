@@ -48,6 +48,15 @@
         border-radius: 5px;
         z-index: 999;
         position: relative;
+        transition: transform $transition_hover;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: $width_mobile_3) {
+            display: none;
+        }
     }
 
     &__burger {
@@ -118,6 +127,7 @@
 
     &__item {
         margin-right: 56px;
+        position: relative;
 
         &:last-child {
             margin-right: 0;
@@ -133,6 +143,23 @@
     &__button {
         background: none;
         @include fonttype_text();
+        padding: 3px 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            height: 0;
+            transition: right $transition_hover;
+
+            border-bottom: 1px solid $black_1;
+        }
+
+        &:hover::after {
+            right: 0;
+        }
 
         @media (max-width: $width_mobile_1) {
             font-size: $fsz * 2;

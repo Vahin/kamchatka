@@ -1,0 +1,87 @@
+.welcome {
+    height: 100vh;
+    padding-top: 150px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
+        linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 90%), url("../src/img/welcome/bg.jpg") center center / cover no-repeat;
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 100%;
+        align-items: flex-start;
+    }
+
+    &__section {
+        flex: 1 0 50%;
+
+        @media (max-width: $width_mobile_1) {
+            flex: 1 0 100%;
+        }
+
+        &_left {
+        }
+
+        &_right {
+            background: red;
+            min-height: 300px;
+            padding-left: 20px;
+        }
+    }
+
+    &__socials {
+        position: absolute;
+        display: none;
+    }
+}
+
+.tourdesc {
+    display: flex;
+    flex-direction: column;
+    &__heading {
+        @include fonttype_header_1();
+        margin-bottom: 25px;
+    }
+
+    &__date {
+        align-self: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 10px;
+        font-family: $font_2;
+        font-style: normal;
+        font-weight: 700;
+        font-size: $fsz * 1.875;
+        line-height: 187%;
+        color: $white_1;
+        padding: 2px 24px;
+        margin-bottom: 40px;
+
+        background: linear-gradient(91.82deg, $orange_1 5.83%, $orange_2 89.73%), $orange_2;
+        border-radius: 16px;
+        text-transform: uppercase;
+    }
+
+    &__date-range {
+        display: inline-block;
+    }
+
+    &__date-name {
+        display: inline-block;
+    }
+
+    &__slogan {
+        font-family: $font_1;
+        font-style: normal;
+        font-weight: 400;
+        font-size: $fsz * 1.25;
+        line-height: 140%;
+        color: $white_1;
+        margin-bottom: 10px;
+    }
+
+    &__button {
+        align-self: flex-start;
+    }
+}

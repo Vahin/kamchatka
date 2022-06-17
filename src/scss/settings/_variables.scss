@@ -5,7 +5,7 @@ $width_desktop_3: 0;
 
 $width_mobile_1: 900px;
 $width_mobile_2: 0;
-$width_mobile_3: 0;
+$width_mobile_3: 550px;
 
 // Шрифты
 $font_1: "Lato", sans-serif;
@@ -23,9 +23,8 @@ $black_3: rgba(0, 0, 0, 0.25);
 $white_1: #ffffff;
 $white_2: rgba(255, 255, 255, 0.2);
 
-$gray_1: #4f5665;
-
-$green_1: #147e45;
+$orange_1: #fb8b62;
+$orange_2: #f47648;
 
 // Тени
 $shadow_black_1: 0px 6px 14px $black_3;
@@ -35,6 +34,7 @@ $transition: 0.3s;
 
 $transition_burger: $transition;
 $transition_menu: $transition;
+$transition_hover: $transition;
 
 //Миксины
 
@@ -43,6 +43,15 @@ $transition_menu: $transition;
     font-style: normal;
     font-weight: 400;
     font-size: $fsz; // 16px
+    line-height: $lheight;
+    color: $color;
+}
+
+@mixin fonttype_header_1($color: $white_1, $lheight: 114.285%) {
+    font-family: $font_2;
+    font-style: normal;
+    font-weight: 900;
+    font-size: $fsz * 3.5; // 56px
     line-height: $lheight;
     color: $color;
 }

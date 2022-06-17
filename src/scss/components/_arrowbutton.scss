@@ -1,0 +1,85 @@
+.arrowbutton {
+    background: none;
+    display: flex;
+    align-items: center;
+
+    &__text {
+        display: block;
+        position: relative;
+        font-family: $font_1;
+        font-style: normal;
+        font-weight: 400;
+        font-size: $fsz * 1.125;
+        line-height: 133%;
+        color: $white_1;
+
+        margin-right: 10px;
+        padding: 3px 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            height: 0;
+            transition: right $transition_hover;
+
+            border-bottom: 1px solid $white_1;
+        }
+    }
+
+    &__arrow {
+        display: block;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 1px solid $white_1;
+        position: relative;
+
+        transform: rotate(-45deg);
+        transition: transform $transition_hover;
+    }
+
+    &__line {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: $white_1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 1px;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform-origin: center right;
+            background: $white_1;
+            border-radius: 1px;
+        }
+
+        &::before {
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+
+    &:hover &__text::after {
+        right: 0%;
+    }
+
+    &:hover &__arrow {
+        transform: rotate(90deg) scale(1.05);
+    }
+}
