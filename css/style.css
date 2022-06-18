@@ -729,3 +729,171 @@ body {
 .tourdesc__button {
   align-self: flex-start;
 }
+
+.edge {
+  background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%), url("../src/img/edge/bg.jpg") center -20%/120% no-repeat;
+}
+@media (max-width: 1650px) {
+  .edge {
+    background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%), url("../src/img/edge/bg.jpg") center bottom/110% no-repeat;
+  }
+}
+@media (max-width: 700px) {
+  .edge {
+    background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%), url("../src/img/edge/bg.jpg") center bottom/140% no-repeat;
+  }
+}
+@media (max-width: 550px) {
+  .edge {
+    background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%), url("../src/img/edge/bg.jpg") center bottom/270% no-repeat;
+  }
+}
+.edge__container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.edge__desc {
+  max-width: 770px;
+}
+.edge__header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 117%;
+  color: #121212;
+  margin-bottom: 27px;
+}
+.edge__subheader {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  line-height: 133%;
+  color: #313131;
+  opacity: 0.8;
+  margin-bottom: 35px;
+}
+.edge__text {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #313131;
+  margin-bottom: 64px;
+}
+.edge__airplane {
+  min-height: 344px;
+}
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+}
+@media (max-width: 900px) {
+  .features__item {
+    flex: 1 0 34%;
+  }
+}
+.features__imgbox {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+  background: center center/contain no-repeat;
+}
+.features__imgbox_level {
+  background-image: url("../src/img/edge/level.svg");
+}
+.features__imgbox_calendar {
+  background-image: url("../src/img/edge/calendar.svg");
+}
+.features__imgbox_clock {
+  background-image: url("../src/img/edge/clock.svg");
+}
+.features__imgbox_hotel {
+  background-image: url("../src/img/edge/hotel.svg");
+}
+.features__name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 171%;
+  color: #212121;
+}
+.features__desc {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #212121;
+}
+
+.airplane {
+  position: relative;
+}
+.airplane__bgword {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 200px;
+  text-transform: uppercase;
+  color: #000000;
+  text-shadow: 0px 6px 14px rgba(0, 0, 0, 0.25);
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 30%;
+}
+@media (max-width: 900px) {
+  .airplane__bgword {
+    font-size: 164px;
+  }
+}
+.airplane__img {
+  position: absolute;
+  top: 5%;
+  left: 70%;
+  width: 800px;
+  min-height: 320px;
+  background: url("../src/img/edge/airbus.png") center center/contain no-repeat;
+}
+@media (max-width: 900px) {
+  .airplane__img {
+    left: 50%;
+    top: 0;
+  }
+}
+@media (max-width: 700px) {
+  .airplane__img {
+    left: 30%;
+  }
+}
+@media (max-width: 550px) {
+  .airplane__img {
+    left: 20%;
+  }
+}
+
+.edgecomment {
+  max-width: 662px;
+}
+.edgecomment__header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+.edgecomment__text {
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 19px;
+  color: #dedede;
+  margin-bottom: 10px;
+  max-width: 350px;
+}
+.edgecomment__author {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px, 1875;
+  color: #ffffff;
+}

@@ -1,0 +1,186 @@
+.edge {
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%), url("../src/img/edge/bg.jpg") center -20% / 120% no-repeat;
+
+    @media (max-width: $width_desktop_1) {
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 40%), url("../src/img/edge/bg.jpg") center bottom / 110% no-repeat;
+    }
+
+    @media (max-width: $width_mobile_2) {
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 30%), url("../src/img/edge/bg.jpg") center bottom/ 140% no-repeat;
+    }
+
+    @media (max-width: $width_mobile_3) {
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 30%), url("../src/img/edge/bg.jpg") center bottom/ 270% no-repeat;
+    }
+
+    &__container {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    &__desc {
+        max-width: 770px;
+    }
+
+    &__header {
+        font-family: $font_2;
+        font-weight: 700;
+        font-size: $fsz * 3;
+        line-height: 117%;
+        color: $black_4;
+
+        margin-bottom: 27px;
+    }
+
+    &__subheader {
+        font-family: $font_1;
+        font-size: $fsz * 1.5;
+        line-height: 133%;
+        color: $black_5;
+        opacity: 0.8;
+        margin-bottom: 35px;
+    }
+
+    &__text {
+        @include fonttype_text($color: $black_5, $lheight: 150%);
+        margin-bottom: 64px;
+    }
+
+    &__list {
+    }
+
+    &__airplane {
+        min-height: 344px;
+    }
+
+    &__comment {
+    }
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+
+    &__item {
+        @media (max-width: $width_mobile_1) {
+            flex: 1 0 34%;
+        }
+    }
+
+    &__imgbox {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 8px;
+
+        background: center center / contain no-repeat;
+
+        &_level {
+            background-image: url("../src/img/edge/level.svg");
+        }
+
+        &_calendar {
+            background-image: url("../src/img/edge/calendar.svg");
+        }
+
+        &_clock {
+            background-image: url("../src/img/edge/clock.svg");
+        }
+
+        &_hotel {
+            background-image: url("../src/img/edge/hotel.svg");
+        }
+    }
+
+    &__name {
+        font-family: $font_2;
+        font-size: $fsz * 0.875;
+        line-height: 171%;
+        color: $black_2;
+    }
+
+    &__desc {
+        font-family: $font_1;
+        font-weight: 700;
+        font-size: $fsz;
+        line-height: 150%;
+        color: $black_2;
+    }
+}
+
+.airplane {
+    position: relative;
+
+    &__bgword {
+        font-family: $font_3;
+        font-weight: 900;
+        font-size: $fsz * 12.5;
+        text-transform: uppercase;
+        color: $black_1;
+        text-shadow: 0px 6px 14px rgba(0, 0, 0, 0.25);
+        opacity: 0.1;
+
+        position: absolute;
+        top: 0;
+        left: 30%;
+
+        @media (max-width: $width_mobile_1) {
+            font-size: $fsz * 10.25;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 5%;
+        left: 70%;
+
+        width: 800px;
+        min-height: 320px;
+
+        background: url("../src/img/edge/airbus.png") center center / contain no-repeat;
+
+        @media (max-width: $width_mobile_1) {
+            left: 50%;
+            top: 0;
+        }
+
+        @media (max-width: $width_mobile_2) {
+            left: 30%;
+        }
+
+        @media (max-width: $width_mobile_3) {
+            left: 20%;
+        }
+    }
+}
+
+.edgecomment {
+    max-width: 662px;
+    &__header {
+        font-family: $font_2;
+        font-weight: 600;
+        font-size: $fsz * 1.5;
+        line-height: 133%;
+        color: $white_1;
+        margin-bottom: 32px;
+    }
+
+    &__text {
+        font-family: $font_1;
+        font-style: italic;
+        font-size: $fsz;
+        line-height: $fsz * 1.1875;
+        color: $gray_3;
+        margin-bottom: 10px;
+
+        max-width: 350px;
+    }
+
+    &__author {
+        font-family: $font_1;
+        font-weight: 500;
+        font-size: $fsz;
+        line-height: $fsz * 1, 1875;
+        color: $white_1;
+    }
+}
