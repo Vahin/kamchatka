@@ -1,0 +1,35 @@
+.daycontent {
+    &__header {
+        @include fonttype_header_2();
+        margin-bottom: 48px;
+
+        &_black {
+            color: $black_2;
+        }
+    }
+
+    &__day {
+        color: $orange_2;
+    }
+
+    &__text {
+        @include fonttype_text($color: $gray_4);
+
+        &_black {
+            color: $black_5;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__boldtext {
+        font-weight: 600;
+        color: $white_1;
+    }
+}

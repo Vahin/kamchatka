@@ -1,0 +1,65 @@
+.day-2 {
+    background: url("../src/img/day-2/mount.png") right 20% / 50% no-repeat;
+
+    @media (max-width: $width_desktop_1) {
+        background: url("../src/img/day-2/mount.png") right 20% / 70% no-repeat;
+    }
+
+    @media (max-width: $width_mobile_1) {
+        background: none;
+    }
+
+    &__container {
+        padding-top: 65px;
+        padding-bottom: 80px;
+    }
+
+    &__content {
+        max-width: 856px;
+        margin-bottom: 65px;
+    }
+
+    & .daycontent__text {
+        max-width: 540px;
+    }
+
+    &__bottom-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        column-gap: 35px;
+    }
+
+    &__swiper {
+        flex: 0 0 60%;
+        margin: 0;
+        @media (max-width: $width_mobile_1) {
+            flex: 0 0 100%;
+            order: 1;
+        }
+    }
+
+    &__text {
+        // max-width: 478px;
+        padding-bottom: 80px;
+        flex: 0 0 34%;
+
+        @media (max-width: $width_mobile_1) {
+            flex: 0 0 100%;
+            order: 0;
+        }
+    }
+}
+
+.day-2 .swiper-slide {
+    width: 320px;
+
+    @media (max-width: $width_mobile_1) {
+        width: 280px;
+    }
+
+    &:not(&-active) {
+        transform: scale(1);
+    }
+}

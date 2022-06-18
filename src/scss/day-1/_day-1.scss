@@ -1,0 +1,61 @@
+.day-1 {
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 25%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 60%), url("../src/img/day-1/bg.jpg") center center / cover no-repeat;
+
+    @media (max-width: $width_desktop_1) {
+        background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 5%),
+            url("../src/img/day-1/cloud.png") center 140% / contain no-repeat, linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 60%),
+            url("../src/img/day-1/bg.jpg") center center / cover no-repeat;
+    }
+
+    @media (max-width: $width_desktop_2) {
+        background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 5%),
+            url("../src/img/day-1/cloud.png") center 120% / contain no-repeat, linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 60%),
+            url("../src/img/day-1/bg.jpg") center center / cover no-repeat;
+    }
+
+    @media (max-width: $width_mobile_1) {
+        background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 5%),
+            url("../src/img/day-1/cloud.png") center 110% / 120% no-repeat, linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 60%),
+            url("../src/img/day-1/bg.jpg") center center / cover no-repeat;
+    }
+
+    @media (max-width: $width_mobile_2) {
+        background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 5%),
+            url("../src/img/day-1/cloud.png") center 110% / 140% no-repeat, linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 60%),
+            url("../src/img/day-1/bg.jpg") center center / cover no-repeat;
+    }
+
+    @media (max-width: $width_mobile_3) {
+        background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 5%),
+            url("../src/img/day-1/cloud.png") center 110% / 220% no-repeat, linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 60%),
+            url("../src/img/day-1/bg.jpg") center center / cover no-repeat;
+    }
+
+    &__container {
+        padding-top: 80px;
+        padding-bottom: 170px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
+
+    &__content {
+        flex: 0 0 47%;
+        max-width: 461px;
+
+        @media (max-width: $width_mobile_1) {
+            flex: 0 0 100%;
+            margin-bottom: 48px;
+        }
+    }
+
+    &__swiper {
+        align-self: center;
+        flex: 0 0 47%;
+
+        @media (max-width: $width_mobile_1) {
+            flex: 0 0 100%;
+        }
+    }
+}

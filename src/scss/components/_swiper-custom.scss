@@ -48,10 +48,11 @@
         font-size: $fsz;
         line-height: 150%;
         color: $white_1;
+        margin-bottom: 10px;
     }
 
     &__text {
-        @include fonttype_text_small();
+        @include fonttype_text_small($lheight: 120%);
     }
 }
 
@@ -60,6 +61,13 @@
     position: absolute;
     left: 0;
     bottom: 0;
+
+    @media (min-width: $width_mobile_1) {
+        &_left {
+            left: 100%;
+            transform: translateX(-100%);
+        }
+    }
 }
 
 .swiper-custom-buttom {
@@ -104,6 +112,19 @@
 
         &::after {
             transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+
+    &_black {
+        border-color: $black_2;
+    }
+
+    &_black &__line {
+        background: $black_2;
+
+        &::before,
+        &::after {
+            background: $black_2;
         }
     }
 }
