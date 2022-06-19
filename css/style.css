@@ -995,32 +995,8 @@ body {
 }
 
 .day-1 {
-  background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 25%), linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%), url("../src/img/day-1/bg.jpg") center center/cover no-repeat;
-}
-@media (max-width: 1650px) {
-  .day-1 {
-    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 5%), url("../src/img/day-1/cloud.png") center 140%/contain no-repeat, linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%), url("../src/img/day-1/bg.jpg") center center/cover no-repeat;
-  }
-}
-@media (max-width: 1300px) {
-  .day-1 {
-    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 5%), url("../src/img/day-1/cloud.png") center 120%/contain no-repeat, linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%), url("../src/img/day-1/bg.jpg") center center/cover no-repeat;
-  }
-}
-@media (max-width: 900px) {
-  .day-1 {
-    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 5%), url("../src/img/day-1/cloud.png") center 110%/120% no-repeat, linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%), url("../src/img/day-1/bg.jpg") center center/cover no-repeat;
-  }
-}
-@media (max-width: 700px) {
-  .day-1 {
-    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 5%), url("../src/img/day-1/cloud.png") center 110%/140% no-repeat, linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%), url("../src/img/day-1/bg.jpg") center center/cover no-repeat;
-  }
-}
-@media (max-width: 550px) {
-  .day-1 {
-    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 5%), url("../src/img/day-1/cloud.png") center 110%/220% no-repeat, linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%), url("../src/img/day-1/bg.jpg") center center/cover no-repeat;
-  }
+  background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%), url("../src/img/day-1/bg.jpg") center center/cover no-repeat;
+  position: relative;
 }
 .day-1__container {
   padding-top: 80px;
@@ -1029,6 +1005,8 @@ body {
   flex-wrap: wrap;
   -moz-column-gap: 30px;
        column-gap: 30px;
+  position: relative;
+  z-index: 2;
 }
 .day-1__content {
   flex: 0 0 47%;
@@ -1049,6 +1027,25 @@ body {
     flex: 0 0 100%;
   }
 }
+.day-1__cloud {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(50%);
+  z-index: 1;
+  width: 100%;
+  padding-bottom: 18%;
+  background: url("../src/img/day-1/cloud.png") center center/100% no-repeat;
+}
+.day-1__cloud::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255) 50%);
+}
 
 .day-2 {
   background: url("../src/img/day-2/mount.png") right 20%/50% no-repeat;
@@ -1066,6 +1063,8 @@ body {
 .day-2__container {
   padding-top: 65px;
   padding-bottom: 80px;
+  position: relative;
+  z-index: 2;
 }
 .day-2__content {
   max-width: 856px;
