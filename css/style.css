@@ -1071,3 +1071,126 @@ body {
 .day-2 .swiper-slide:not(.day-2 .swiper-slide-active) {
   transform: scale(1);
 }
+
+.waiting {
+  background: #f1f1f1;
+}
+.waiting__container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.waiting__header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  color: #000000;
+  margin-bottom: 48px;
+}
+.routecards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.routecards__item {
+  flex: 1 0 21%;
+  background: #ffffff;
+  padding-bottom: 32px;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media (max-width: 1150px) {
+  .routecards__item {
+    flex: 1 0 34%;
+  }
+}
+@media (max-width: 700px) {
+  .routecards__item {
+    flex: 1 0 100%;
+  }
+}
+.routecards__imgbox {
+  position: relative;
+  padding-bottom: 56%;
+  margin-bottom: 32px;
+}
+.routecards__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.routecards__caption {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #212121;
+  margin-bottom: 15px;
+  padding: 0px 24px;
+}
+.routecards__text {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  color: #5a5a5a;
+  padding: 0px 24px;
+}
+
+.day-3 {
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%), url("../src/img/day-3/bg.png") center bottom/contain no-repeat;
+  position: relative;
+}
+.day-3__container {
+  padding-top: 80px;
+  padding-bottom: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  -moz-column-gap: 15%;
+       column-gap: 15%;
+}
+.day-3__swiper {
+  flex: 1 0 50%;
+  margin-left: 0;
+  margin-top: 50px;
+}
+@media (max-width: 900px) {
+  .day-3__swiper {
+    flex: 1 0 100%;
+    order: 1;
+  }
+}
+.day-3__content {
+  flex: 1 0 35%;
+}
+@media (max-width: 900px) {
+  .day-3__content {
+    flex: 1 0 100%;
+  }
+}
+.day-3__eagle {
+  position: absolute;
+  left: -10%;
+  bottom: -10%;
+  width: 50%;
+  min-height: 300px;
+  background: url("../src/img/day-3/eagle.png") center center/contain no-repeat;
+}
+
+.day-3 .swiper-slide {
+  width: 320px;
+}
+@media (max-width: 900px) {
+  .day-3 .swiper-slide {
+    width: 280px;
+  }
+}
+.day-3 .swiper-slide:not(.day-3 .swiper-slide-active) {
+  transform: scale(1);
+}

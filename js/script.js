@@ -48,3 +48,18 @@ const day2Slider = new Swiper(".day-2__swiper", {
 if (document.documentElement.clientWidth > 950) {
     day2Slider.slideTo(day2Slider.slides.length - 1);
 }
+
+const day3Slider = new Swiper(".day-3__swiper", {
+    spaceBetween: 20,
+    slidesPerView: "auto",
+    grabCursor: true,
+    navigation: {
+        nextEl: ".swiper-custom-buttom-prev",
+        prevEl: ".swiper-custom-buttom-next",
+    },
+    freeMode: true,
+});
+
+if (document.documentElement.clientWidth > 950) {
+    day3Slider.slideTo(day3Slider.slides.length - 1);
+}

@@ -1,0 +1,75 @@
+.waiting {
+    background: $gray_6;
+
+    &__container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    &__header {
+        font-family: $font_2;
+        font-weight: 700;
+        font-size: $fsz * 2.25;
+        line-height: 100%;
+        color: $black_1;
+        margin-bottom: 48px;
+    }
+
+    &__list {
+    }
+}
+
+.routecards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    &__item {
+        flex: 1 0 21%;
+        background: $white_1;
+        padding-bottom: 32px;
+
+        box-shadow: $shadow_black_1;
+        border-radius: 10px;
+        overflow: hidden;
+
+        @media (max-width: $width_desktop_3) {
+            flex: 1 0 34%;
+        }
+
+        @media (max-width: $width_mobile_2) {
+            flex: 1 0 100%;
+        }
+    }
+
+    &__imgbox {
+        position: relative;
+        padding-bottom: 56%;
+
+        margin-bottom: 32px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__caption {
+        font-family: $font_2;
+        font-weight: 700;
+        font-size: $fsz * 1.125;
+        line-height: 133%;
+        color: $black_2;
+        margin-bottom: 15px;
+        padding: 0px 24px;
+    }
+
+    &__text {
+        @include fonttype_text_small($color: $gray_5);
+        padding: 0px 24px;
+    }
+}
