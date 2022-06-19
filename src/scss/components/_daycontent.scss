@@ -32,4 +32,50 @@
         font-weight: 600;
         color: $white_1;
     }
+
+    &__additional {
+    }
+}
+
+.additional {
+    &__header {
+        font-family: $font_2;
+        font-weight: 700;
+        font-size: $fsz * 1.25;
+        line-height: 140%;
+        color: $white_1;
+        margin-bottom: 31px;
+    }
+
+    &__list {
+    }
+
+    &__item {
+        display: flex;
+
+        border-bottom: 1px solid #bababa;
+        margin-bottom: 15px;
+    }
+
+    &__name {
+        flex: 0 0 50%;
+        padding: 10px 5px;
+
+        font-family: $font_1;
+        font-weight: 700;
+        font-size: $fsz;
+        line-height: 150%;
+        color: $white_1;
+    }
+
+    &__desc {
+        flex: 0 0 50%;
+        padding: 5px;
+
+        font-family: $font_1;
+        font-size: $fsz * 0.875;
+        line-height: 171%;
+        color: #bababa;
+        opacity: 0.7;
+    }
 }

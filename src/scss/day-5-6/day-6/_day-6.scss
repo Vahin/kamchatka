@@ -1,0 +1,36 @@
+.day-6 {
+    &__container {
+        padding-top: 124px;
+        padding-bottom: 134px;
+
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10%;
+        align-items: flex-start;
+    }
+
+    &__swiper {
+        flex: 1 0 50%;
+        margin-top: 70px;
+
+        @media (max-width: $width_mobile_1) {
+            flex: 1 0 100%;
+        }
+    }
+
+    &__content {
+        flex: 1 0 40%;
+
+        @media (max-width: $width_mobile_1) {
+            flex: 1 0 100%;
+        }
+    }
+}
+
+.day-6 .swiper-slide {
+    width: 320px;
+
+    @media (max-width: $width_mobile_1) {
+        width: 280px;
+    }
+}

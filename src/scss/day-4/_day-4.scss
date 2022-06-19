@@ -1,0 +1,53 @@
+.day-4 {
+    background: $black_1;
+    position: relative;
+
+    &__container {
+        padding-top: 105px;
+        padding-bottom: 50px;
+
+        display: flex;
+        column-gap: 10%;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &__content {
+        flex: 1 0 40%;
+
+        @media (max-width: $width_mobile_1) {
+            flex: 1 0 100%;
+        }
+    }
+
+    &__swiper {
+        flex: 1 0 40%;
+        margin-top: 50px;
+
+        @media (max-width: $width_mobile_1) {
+            flex: 1 0 100%;
+        }
+    }
+
+    &__eagle {
+        position: absolute;
+        left: -10%;
+        top: -30%;
+        width: 50%;
+        min-height: 300px;
+
+        background: url("../src/img/day-4/eagle.png") center center / contain no-repeat;
+
+        @media (max-width: $width_mobile_2) {
+            display: none;
+        }
+    }
+}
+
+.day-4 .swiper-slide {
+    width: 320px;
+
+    @media (max-width: $width_mobile_1) {
+        width: 280px;
+    }
+}
