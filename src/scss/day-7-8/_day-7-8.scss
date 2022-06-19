@@ -1,0 +1,26 @@
+.day-7-8 {
+    padding-top: 80px;
+    padding-bottom: 160px;
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        padding-bottom: 50%;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 1) 100%),
+            url("../src/img/day-7-8/bg.jpg") center center / cover no-repeat;
+
+        @media (max-width: $width_mobile_2) {
+            width: 1000px;
+            height: 500px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@import "./day-7/day-7";
+@import "./day-8/day-8";

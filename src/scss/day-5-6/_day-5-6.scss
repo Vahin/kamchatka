@@ -18,6 +18,29 @@
             display: none;
         }
     }
+
+    &__cloud {
+        position: absolute;
+        left: -10%;
+        bottom: 0;
+        transform: translateY(50%);
+
+        width: 120%;
+        padding-bottom: 17%;
+
+        background: url("../src/img/day-5-6/cloud.png") center center / 100% no-repeat;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+            background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 90%);
+        }
+    }
 }
 
 @import "./day-5/day-5";

@@ -38,6 +38,8 @@
 }
 
 .additional {
+    margin-top: 45px;
+
     &__header {
         font-family: $font_2;
         font-weight: 700;
@@ -77,5 +79,17 @@
         line-height: 171%;
         color: #bababa;
         opacity: 0.7;
+    }
+
+    &_black &__header {
+        color: $black_2;
+    }
+
+    &_black &__name {
+        color: $black_1;
+    }
+
+    &_black &__desc {
+        color: $black_5;
     }
 }

@@ -1,0 +1,16 @@
+.day-8 {
+    position: relative;
+    z-index: 2;
+    &__container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__content {
+        flex: 0 0 540px;
+
+        @media (max-width: $width_mobile_1) {
+            flex: 1 0 100%;
+        }
+    }
+}

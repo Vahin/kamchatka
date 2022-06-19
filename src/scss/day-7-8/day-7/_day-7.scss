@@ -1,0 +1,54 @@
+.day-7 {
+    margin-bottom: 150px;
+    position: relative;
+    z-index: 2;
+
+    &__container {
+    }
+
+    &__content {
+        max-width: 865px;
+        margin-bottom: 57px;
+    }
+
+    & .daycontent__text {
+        max-width: 548px;
+    }
+
+    &__bottom-box {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        column-gap: 10%;
+    }
+
+    &__swiper {
+        flex: 1 0 50%;
+
+        @media (max-width: $width_mobile_1) {
+            flex: 1 0 100%;
+            order: 1;
+        }
+    }
+
+    &__text {
+        flex: 1 0 40%;
+
+        @media (max-width: $width_mobile_1) {
+            flex: 1 0 100%;
+            margin-bottom: 48px;
+        }
+    }
+}
+
+.day-7 .swiper-slide {
+    width: 320px;
+
+    @media (max-width: $width_mobile_1) {
+        width: 280px;
+    }
+
+    &:not(&-active) {
+        transform: scale(1);
+    }
+}

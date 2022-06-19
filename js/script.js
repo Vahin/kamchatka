@@ -100,3 +100,18 @@ const day6Slider = new Swiper(".day-6__swiper", {
     },
     freeMode: true,
 });
+
+const day7Slider = new Swiper(".day-7__swiper", {
+    spaceBetween: 20,
+    slidesPerView: "auto",
+    grabCursor: true,
+    navigation: {
+        nextEl: ".swiper-custom-buttom-prev",
+        prevEl: ".swiper-custom-buttom-next",
+    },
+    freeMode: true,
+});
+
+if (document.documentElement.clientWidth > 950) {
+    day7Slider.slideTo(day7Slider.slides.length - 1);
+}
