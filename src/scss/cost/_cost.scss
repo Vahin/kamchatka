@@ -74,10 +74,15 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 40px;
+    row-gap: 40px;
 
     &__item {
         margin-bottom: 30px;
         flex: 1 0 300px;
+
+        @media (max-width: $width_mobile_3) {
+            flex: 1 0 100%;
+        }
     }
 
     &__header {
