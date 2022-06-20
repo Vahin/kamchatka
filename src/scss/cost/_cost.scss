@@ -1,0 +1,183 @@
+.cost {
+    &__container {
+        padding-top: 120px;
+        padding-bottom: 80px;
+
+        border-bottom: 4px solid $black_2;
+    }
+
+    &__header {
+        font-family: $font_2;
+        font-weight: 700;
+        font-size: $fsz * 4;
+        line-height: 112%;
+        color: $black_4;
+        margin-bottom: 70px;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 100px;
+    }
+
+    &__desc {
+        flex: 6 0 540px;
+
+        @media (max-width: $width_mobile_3) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__rates {
+        margin-bottom: 70px;
+    }
+
+    &__include {
+    }
+
+    &__aside {
+        flex: 1 0 260px;
+    }
+}
+
+.rates {
+    &__item {
+        border-bottom: 1px solid $black_1;
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 0;
+
+        @media (max-width: $width_mobile_3) {
+            flex-direction: column;
+            row-gap: 15px;
+        }
+    }
+
+    &__name {
+        font-family: $font_1;
+        font-size: $fsz * 1.25;
+        line-height: 120%;
+        color: $black_1;
+    }
+
+    &__price {
+        font-family: $font_1;
+        font-weight: 700;
+        font-size: $fsz * 1.5;
+        line-height: 100%;
+        color: $black_1;
+    }
+}
+
+.costinclude {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+
+    &__item {
+        margin-bottom: 30px;
+        flex: 1 0 300px;
+    }
+
+    &__header {
+        padding-left: 35px;
+        position: relative;
+
+        font-family: $font_1;
+        font-weight: 700;
+        font-size: $fsz * 1.5;
+        line-height: 100%;
+        color: $black_1;
+        margin-bottom: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 26px;
+            height: 26px;
+            transform: translateY(-50%);
+            background: url("../src/img/cost/icon-2.svg") center center / contain no-repeat;
+        }
+    }
+
+    &__item_in &__header {
+        color: #275553;
+
+        &::before {
+            background-image: url("../src/img/cost/icon-1.svg");
+        }
+    }
+
+    &__sublist {
+    }
+
+    &__subitem {
+        @include fonttype_text($color: $black_5, $lheight: 150%);
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 12px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 11px;
+
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #d3e7e3;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.costaside {
+    &__list {
+        margin-bottom: 90px;
+    }
+
+    &__item {
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        font-family: $font_1;
+        font-size: $fsz * 1.125;
+        line-height: 133%;
+        color: $orange_2;
+
+        display: inline-block;
+        padding: 3px 0;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            height: 0;
+            transition: right $transition_hover;
+
+            border-bottom: 1px solid $orange_2;
+        }
+
+        &:hover::after {
+            right: 0;
+        }
+    }
+
+    &__button {
+    }
+}

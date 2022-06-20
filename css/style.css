@@ -288,6 +288,12 @@ h6 {
   transition: right 0.3s;
   border-bottom: 1px solid #ffffff;
 }
+.arrowbutton_black .arrowbutton__text {
+  color: #212121;
+}
+.arrowbutton_black .arrowbutton__text::after {
+  border-bottom: 1px solid #212121;
+}
 .arrowbutton__arrow {
   display: block;
   width: 64px;
@@ -297,6 +303,9 @@ h6 {
   position: relative;
   transform: rotate(-45deg);
   transition: transform 0.3s;
+}
+.arrowbutton_black .arrowbutton__arrow {
+  border: 1px solid #212121;
 }
 .arrowbutton__line {
   display: block;
@@ -326,6 +335,12 @@ h6 {
 }
 .arrowbutton__line::after {
   transform: translateY(-50%) rotate(-45deg);
+}
+.arrowbutton_black .arrowbutton__line {
+  background: #212121;
+}
+.arrowbutton_black .arrowbutton__line::before, .arrowbutton_black .arrowbutton__line::after {
+  background: #212121;
 }
 .arrowbutton:hover .arrowbutton__text::after {
   right: 0%;
@@ -622,7 +637,7 @@ body {
 .header__button:hover {
   transform: scale(1.05);
 }
-@media (max-width: 550px) {
+@media (max-width: 615px) {
   .header__button {
     display: none;
   }
@@ -839,7 +854,7 @@ body {
     background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%), url("../src/img/edge/bg.jpg") center bottom/140% no-repeat;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 615px) {
   .edge {
     background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%), url("../src/img/edge/bg.jpg") center bottom/270% no-repeat;
   }
@@ -960,7 +975,7 @@ body {
     left: 30%;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 615px) {
   .airplane__img {
     left: 20%;
   }
@@ -1482,4 +1497,157 @@ body {
   .day-8__content {
     flex: 1 0 100%;
   }
+}
+
+.cost__container {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  border-bottom: 4px solid #212121;
+}
+.cost__header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 112%;
+  color: #121212;
+  margin-bottom: 70px;
+}
+.cost__content {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+}
+.cost__desc {
+  flex: 6 0 540px;
+}
+@media (max-width: 615px) {
+  .cost__desc {
+    flex: 0 0 100%;
+  }
+}
+.cost__rates {
+  margin-bottom: 70px;
+}
+.cost__aside {
+  flex: 1 0 260px;
+}
+
+.rates__item {
+  border-bottom: 1px solid #000000;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+@media (max-width: 615px) {
+  .rates__item {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}
+.rates__name {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000000;
+}
+.rates__price {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  color: #000000;
+}
+
+.costinclude {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.costinclude__item {
+  margin-bottom: 30px;
+  flex: 1 0 300px;
+}
+.costinclude__header {
+  padding-left: 35px;
+  position: relative;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.costinclude__header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  transform: translateY(-50%);
+  background: url("../src/img/cost/icon-2.svg") center center/contain no-repeat;
+}
+.costinclude__item_in .costinclude__header {
+  color: #275553;
+}
+.costinclude__item_in .costinclude__header::before {
+  background-image: url("../src/img/cost/icon-1.svg");
+}
+.costinclude__subitem {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #313131;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 12px;
+}
+.costinclude__subitem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d3e7e3;
+}
+.costinclude__subitem:last-child {
+  margin-bottom: 0;
+}
+
+.costaside__list {
+  margin-bottom: 90px;
+}
+.costaside__item {
+  margin-bottom: 24px;
+}
+.costaside__item:last-child {
+  margin-bottom: 0;
+}
+.costaside__link {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 133%;
+  color: #f47648;
+  display: inline-block;
+  padding: 3px 0;
+  position: relative;
+}
+.costaside__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 0;
+  transition: right 0.3s;
+  border-bottom: 1px solid #f47648;
+}
+.costaside__link:hover::after {
+  right: 0;
 }
