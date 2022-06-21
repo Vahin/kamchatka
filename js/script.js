@@ -115,3 +115,27 @@ const day7Slider = new Swiper(".day-7__swiper", {
 if (document.documentElement.clientWidth > 950) {
     day7Slider.slideTo(day7Slider.slides.length - 1);
 }
+
+// --- Input type number --- //
+const appformNumber = document.querySelector(".applabel__input_number");
+const appformPlus = document.querySelector(".applabel__number-plus");
+const appformMinus = document.querySelector(".applabel__number-minus");
+
+appformPlus.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    appformNumber.stepUp();
+});
+
+appformMinus.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    appformNumber.stepDown();
+});
+
+import { SmoothScroll } from "./SmoothScroll.js";
+
+new SmoothScroll({
+    selector: "[data-anchor]",
+    breakpoint: 900,
+});

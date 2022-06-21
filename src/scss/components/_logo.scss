@@ -5,4 +5,8 @@
     height: 36px;
 
     background: url("../src/img/logo/logo.svg") center center / contain no-repeat;
+
+    &_gray {
+        background: url("../src/img/logo/logo_gray.svg") center center / contain no-repeat;
+    }
 }

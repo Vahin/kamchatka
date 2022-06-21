@@ -38,13 +38,11 @@
         fill: $white_1;
     }
 
-    &__link_stroke-black &__path {
-        stroke-width: 1;
-        stroke: $black_1;
+    &__link_black path {
+        fill: $black_2;
     }
 
-    &__link_stroke-black &__path {
-        stroke-width: 1;
-        stroke: $white_1;
+    &__link_white path {
+        fill: $white_1;
     }
 }

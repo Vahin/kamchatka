@@ -149,10 +149,85 @@
         border-bottom: 1px solid $black_2;
 
         &_number {
+            appearance: textfield;
+        }
+
+        &_number::-webkit-outer-spin-button,
+        &_number::-webkit-inner-spin-button {
+            display: none;
         }
 
         &_date {
             max-width: 260px;
+
+            @media (max-width: $width_mobile_3) {
+                max-width: none;
+            }
+        }
+    }
+
+    &__number-box {
+        display: block;
+        position: relative;
+    }
+
+    &__number-controls {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    &__number-minus {
+        width: 16px;
+        height: 16px;
+        margin-right: 31px;
+        position: relative;
+        background: none;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background: $green_1;
+            border-radius: 1px;
+        }
+    }
+
+    &__number-plus {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        background: none;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background: $green_1;
+            border-radius: 1px;
+        }
+
+        &::before {
+            width: 100%;
+            height: 2px;
+        }
+
+        &::after {
+            width: 2px;
+            height: 100%;
         }
     }
 }
@@ -182,7 +257,7 @@
     &__input {
         position: absolute;
         top: 0;
-        left: -1000px;
+        left: -10000px;
     }
 
     &__placeholder {
