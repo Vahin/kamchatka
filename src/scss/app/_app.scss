@@ -364,7 +364,9 @@
         flex: 1 0 100px;
         background: none;
 
-        // border-bottom: 1px solid $gray_3;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $gray_3;
     }
 
     &__submit {
