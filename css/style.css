@@ -2029,11 +2029,7 @@ body {
   padding: 13px;
   min-width: none;
   flex: 1 0 100px;
-  background: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  outline: none;
+  background: white;
   border-bottom: 1px solid #dedede;
 }
 .memoform__submit {
