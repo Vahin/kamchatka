@@ -12,9 +12,11 @@
 
     &:not(&-active) {
         transform: scale(0.85);
-    }
 
-    transform: scale(0.99);
+        @media (max-width: $width_mobile_2) {
+            transform: scale(1);
+        }
+    }
 
     &__content {
         padding-bottom: 100%;
