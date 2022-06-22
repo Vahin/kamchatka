@@ -2030,8 +2030,6 @@ body {
   min-width: none;
   flex: 1 0 100px;
   background: none;
-  border-bottom: 1px solid #dedede;
-  background: rgba(255, 255, 255, 0);
 }
 .memoform__submit {
   font-family: "Lato", sans-serif;
