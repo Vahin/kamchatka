@@ -31,6 +31,8 @@ body {
     max-width: $width_desktop_2;
     margin: 0 auto;
     padding: 0 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .lock-burger {

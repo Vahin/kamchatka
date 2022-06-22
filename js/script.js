@@ -19,6 +19,11 @@ new SmoothScroll({
     breakpoint: 900,
 });
 
+// --- Dots --- //
+let daysHeaders = document.querySelectorAll(".daycontent__header");
+let dots = createDots(daysHeaders);
+let WIDTH = 1310;
+
 // --- Sliders --- //
 
 const welcomeSlider = new Swiper(".welcome__swiper", {
@@ -271,6 +276,19 @@ gsap.from(".day-1__content", {
     duration: animationDuration,
     y: 100,
     opacity: 0,
+    onComplete: () => {
+        if (document.documentElement.clientWidth > WIDTH) {
+            let svg = createPath(dots[0], dots[1]);
+            gsap.from(svg, {
+                duration: 2,
+                height: 0,
+                ease: "power3.out",
+            });
+            window.addEventListener("resize", () => {
+                killSVG(svg);
+            });
+        }
+    },
 });
 
 gsap.from(".day-1__swiper", {
@@ -285,6 +303,19 @@ gsap.from(".day-2__content", {
     duration: animationDuration,
     y: 100,
     opacity: 0,
+    onComplete: () => {
+        if (document.documentElement.clientWidth > WIDTH) {
+            let svg = createPath(dots[1], dots[2]);
+            gsap.from(svg, {
+                duration: 4,
+                height: 0,
+                ease: "power3.out",
+            });
+            window.addEventListener("resize", () => {
+                killSVG(svg);
+            });
+        }
+    },
 });
 
 gsap.from(".day-2__swiper", {
@@ -314,6 +345,19 @@ gsap.from(".day-3__content", {
     duration: animationDuration,
     y: 100,
     opacity: 0,
+    onComplete: () => {
+        if (document.documentElement.clientWidth > WIDTH) {
+            let svg = createPath(dots[2], dots[3]);
+            gsap.from(svg, {
+                duration: 2,
+                height: 0,
+                ease: "power3.out",
+            });
+            window.addEventListener("resize", () => {
+                killSVG(svg);
+            });
+        }
+    },
 });
 
 gsap.from(".day-3__swiper", {
@@ -328,6 +372,19 @@ gsap.from(".day-4__content", {
     duration: animationDuration,
     y: 100,
     opacity: 0,
+    onComplete: () => {
+        if (document.documentElement.clientWidth > WIDTH) {
+            let svg = createPath(dots[3], dots[4]);
+            gsap.from(svg, {
+                duration: 2,
+                height: 0,
+                ease: "power3.out",
+            });
+            window.addEventListener("resize", () => {
+                killSVG(svg);
+            });
+        }
+    },
 });
 
 gsap.from(".day-4__swiper", {
@@ -342,6 +399,19 @@ gsap.from(".day-5__content", {
     duration: animationDuration,
     y: 100,
     opacity: 0,
+    onComplete: () => {
+        if (document.documentElement.clientWidth > WIDTH) {
+            let svg = createPath(dots[4], dots[5]);
+            gsap.from(svg, {
+                duration: 2,
+                height: 0,
+                ease: "power3.out",
+            });
+            window.addEventListener("resize", () => {
+                killSVG(svg);
+            });
+        }
+    },
 });
 
 gsap.from(".day-5__swiper", {
@@ -356,6 +426,19 @@ gsap.from(".day-6__content", {
     duration: animationDuration,
     y: 100,
     opacity: 0,
+    onComplete: () => {
+        if (document.documentElement.clientWidth > WIDTH) {
+            let svg = createPath(dots[5], dots[6]);
+            gsap.from(svg, {
+                duration: 2,
+                height: 0,
+                ease: "power3.out",
+            });
+            window.addEventListener("resize", () => {
+                killSVG(svg);
+            });
+        }
+    },
 });
 
 gsap.from(".day-6__swiper", {
@@ -370,6 +453,19 @@ gsap.from(".day-7__content", {
     duration: animationDuration,
     y: 100,
     opacity: 0,
+    onComplete: () => {
+        if (document.documentElement.clientWidth > WIDTH) {
+            let svg = createPath(dots[6], dots[7]);
+            gsap.from(svg, {
+                duration: 2,
+                height: 0,
+                ease: "power3.out",
+            });
+            window.addEventListener("resize", () => {
+                killSVG(svg);
+            });
+        }
+    },
 });
 
 gsap.from(".day-7__swiper", {
@@ -392,3 +488,89 @@ gsap.from(".day-8__content", {
     y: 100,
     opacity: 0,
 });
+
+// --- Path --- //
+
+function createDots(headers) {
+    let dots = [];
+
+    headers.forEach((header) => {
+        let dot = {};
+
+        dot.x = header.getBoundingClientRect().left - 28;
+        dot.y = window.pageYOffset + header.getBoundingClientRect().top + 25;
+        console.log(dot.y);
+
+        dots.push(dot);
+    });
+
+    return dots;
+}
+
+function createPath(dot1, dot2) {
+    let width = Math.abs(dot2.x - dot1.x);
+    width = width < 2 ? 2 : width;
+    let height = Math.abs(dot2.y - dot1.y);
+    let directionRight = dot1.x < dot2.x ? true : false;
+    let attr = {
+        fill: "transparent",
+        stroke: "#6C6C6C",
+        strokeWidth: 3,
+        style: "stroke-dasharray: 3 7;",
+        width: "3",
+    };
+
+    let svg = Snap(width, height);
+    svg.node.style.position = "absolute";
+    svg.node.style.zIndex = 1;
+    svg.node.style.opacity = 0.99;
+    svg.node.style.top = `${dot1.y}px`;
+    svg.node.style.left = directionRight ? `${dot1.x}px` : `${dot2.x}px`;
+
+    let line;
+    if (width == 2) {
+        line = svg.path(`M 0 0 L 0 ${height - 20}`);
+    } else {
+        line = svg.path(createRandomPath(directionRight, width, height));
+    }
+
+    line.attr(attr);
+
+    document.body.appendChild(svg.node);
+
+    return svg.node;
+}
+
+function createRandomPath(dirR, w, h) {
+    let sign = dirR ? 1 : -1;
+
+    let steps = Math.ceil(Math.random() * 3) * 2;
+    let points = dirR ? [{ x: 0, y: 0 }] : [{ x: w, y: 0 }];
+
+    for (let i = 1; i < steps; i++) {
+        let point = {};
+        point.x = Math.round(points[i - 1].x + (sign * w) / steps + (w / steps) * (Math.random() - 0.5));
+        point.y = Math.round(points[i - 1].y + h / steps + (h / steps) * (Math.random() - 0.5));
+
+        points.push(point);
+    }
+    points.push(dirR ? { x: w, y: h } : { x: 0, y: h });
+
+    let path = `M ${points[0].x} ${points[0].y}`;
+    for (let i = 1; i < points.length; i++) {
+        let part;
+        if (i % 2) {
+            part = ` Q ${points[i - 1].x} ${points[i].y} ${points[i].x} ${points[i].y}`;
+        } else {
+            part = ` Q ${points[i].x} ${points[i - 1].y} ${points[i].x} ${points[i].y}`;
+        }
+
+        path += part;
+    }
+
+    return path;
+}
+
+function killSVG(svg) {
+    svg.remove();
+}

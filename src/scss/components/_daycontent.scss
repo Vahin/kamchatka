@@ -6,6 +6,46 @@
         &_black {
             color: $black_2;
         }
+
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+
+            position: absolute;
+            top: 19px;
+            left: -35px;
+
+            background: $orange_1;
+            border-radius: 50%;
+
+            @media (max-width: $width_desktop_2 + 10px) {
+                display: none;
+            }
+        }
+
+        &::after {
+            content: "";
+            width: 32px;
+            height: 32px;
+
+            position: absolute;
+            top: 11px;
+            left: -43px;
+
+            border-radius: 50%;
+            border: 3px solid #6c6c6c;
+
+            @media (max-width: $width_desktop_2 + 10px) {
+                display: none;
+            }
+        }
+
+        &_black::after {
+            border: 3px solid #6c6c6c;
+        }
     }
 
     &__day {

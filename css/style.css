@@ -488,9 +488,43 @@ h6 {
   line-height: 125%;
   color: #ffffff;
   margin-bottom: 48px;
+  position: relative;
 }
 .daycontent__header_black {
   color: #212121;
+}
+.daycontent__header::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 19px;
+  left: -35px;
+  background: #fb8b62;
+  border-radius: 50%;
+}
+@media (max-width: 1310px) {
+  .daycontent__header::before {
+    display: none;
+  }
+}
+.daycontent__header::after {
+  content: "";
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 11px;
+  left: -43px;
+  border-radius: 50%;
+  border: 3px solid #6c6c6c;
+}
+@media (max-width: 1310px) {
+  .daycontent__header::after {
+    display: none;
+  }
+}
+.daycontent__header_black::after {
+  border: 3px solid #6c6c6c;
 }
 .daycontent__day {
   color: #f47648;
@@ -576,6 +610,8 @@ body {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 40px;
+  position: relative;
+  z-index: 2;
 }
 
 .lock-burger {
@@ -1132,6 +1168,8 @@ body {
 
 .waiting {
   background: #f1f1f1;
+  position: relative;
+  z-index: 2;
 }
 .waiting__container {
   padding-top: 80px;
@@ -1281,6 +1319,7 @@ body {
   top: -30%;
   width: 50%;
   min-height: 300px;
+  z-index: 2;
   background: url("../src/img/day-4/eagle.png") center center/contain no-repeat;
 }
 @media (max-width: 700px) {

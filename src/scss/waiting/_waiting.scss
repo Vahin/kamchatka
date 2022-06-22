@@ -1,5 +1,7 @@
 .waiting {
     background: $gray_6;
+    position: relative;
+    z-index: 2;
 
     &__container {
         padding-top: 80px;
