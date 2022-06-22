@@ -19,7 +19,7 @@
     }
 
     &__desc {
-        max-width: 770px;
+        max-width: 780px;
     }
 
     &__header {
@@ -60,9 +60,11 @@
 .features {
     display: flex;
     flex-wrap: wrap;
-    gap: 64px;
+    column-gap: 1%;
+    row-gap: 60px;
 
     &__item {
+        flex: 1 0 24%;
         @media (max-width: $width_mobile_1) {
             flex: 1 0 34%;
         }

@@ -364,6 +364,7 @@ h6 {
           user-select: none;
   overflow: hidden;
   box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.25);
+  transform: scale(0.99);
 }
 .swiper-slide:not(.swiper-slide-active) {
   transform: scale(0.85);
@@ -371,6 +372,7 @@ h6 {
 .swiper-slide__content {
   padding-bottom: 100%;
   position: relative;
+  overflow: hidden;
 }
 .swiper-slide__img {
   position: absolute;
@@ -903,7 +905,7 @@ body {
   padding-bottom: 120px;
 }
 .edge__desc {
-  max-width: 770px;
+  max-width: 780px;
 }
 .edge__header {
   font-family: "Montserrat", sans-serif;
@@ -936,7 +938,12 @@ body {
 .features {
   display: flex;
   flex-wrap: wrap;
-  gap: 64px;
+  -moz-column-gap: 1%;
+       column-gap: 1%;
+  row-gap: 60px;
+}
+.features__item {
+  flex: 1 0 24%;
 }
 @media (max-width: 900px) {
   .features__item {

@@ -14,9 +14,12 @@
         transform: scale(0.85);
     }
 
+    transform: scale(0.99);
+
     &__content {
         padding-bottom: 100%;
         position: relative;
+        overflow: hidden;
     }
 
     &__img {
@@ -35,7 +38,7 @@
         background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 
         transform: translateY(100%);
-        transition: transform $transition_slider;
+        transition: transform 0.3s;
     }
 
     &:hover &__desc {
