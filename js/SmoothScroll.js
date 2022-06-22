@@ -1,5 +1,5 @@
 export class SmoothScroll {
-    constructor({ selector, breakpoint = 0 }) {
+    constructor({ selector, breakpoint = 900 }) {
         this.list = document.querySelectorAll(selector);
         this.breakpoint = breakpoint;
 
@@ -25,29 +25,18 @@ export class SmoothScroll {
         });
     }
 
-    smoothScrollTo({ element, onEnd = () => {} }) {
+    smoothScrollTo({ element }) {
         if (!element) return;
-        let offsetTop = document.querySelector("header").offsetHeight;
+        let offsetTop = document.querySelector(".header").offsetHeight;
 
-        let startPosition = window.pageYOffset;
-        let endPosition = element.getBoundingClientRect().top;
-        if (endPosition < 0 && window.clientWidth < this.breakpoint) endPosition -= offsetTop;
-
-        if (startPosition + endPosition < 0) {
-            endPosition = -startPosition;
+        let end = window.pageYOffset + element.getBoundingClientRect().top;
+        if (window.pageYOffset > end && document.documentElement.offsetWidth < this.breakpoint) {
+            end -= offsetTop;
         }
-        let y = startPosition + endPosition;
 
-        window.scrollBy({
-            top: endPosition,
+        window.scrollTo({
+            top: end,
             behavior: "smooth",
         });
-
-        let endInterval = setInterval(() => {
-            if (window.pageYOffset >= y - 20 && window.pageYOffset <= y + 20) {
-                onEnd();
-                clearInterval(endInterval);
-            }
-        }, 20);
     }
 }

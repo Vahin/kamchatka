@@ -157,15 +157,11 @@ gsap.registerPlugin(ScrollTrigger);
 const welcomeTL = gsap.timeline();
 const animationDuration = 0.7;
 
-welcomeTL.from(".header", {
-    y: -400,
-    duration: animationDuration,
-});
-
 welcomeTL.from(
     ".tourdesc__heading",
     {
-        x: -1000,
+        x: -100,
+        opacity: 0,
         duration: animationDuration * 2,
     },
     `-=${animationDuration}`
@@ -499,7 +495,6 @@ function createDots(headers) {
 
         dot.x = header.getBoundingClientRect().left - 28;
         dot.y = window.pageYOffset + header.getBoundingClientRect().top + 25;
-        console.log(dot.y);
 
         dots.push(dot);
     });

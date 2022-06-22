@@ -646,6 +646,8 @@ body {
   align-items: center;
   padding-top: 36px;
   padding-bottom: 36px;
+  position: relative;
+  z-index: 999;
 }
 .header__logo {
   margin-right: auto;
