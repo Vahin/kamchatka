@@ -157,15 +157,11 @@ gsap.registerPlugin(ScrollTrigger);
 const welcomeTL = gsap.timeline();
 const animationDuration = 0.7;
 
-welcomeTL.from(
-    ".tourdesc__heading",
-    {
-        x: -100,
-        opacity: 0,
-        duration: animationDuration * 2,
-    },
-    `-=${animationDuration}`
-);
+welcomeTL.from(".tourdesc__heading", {
+    x: -100,
+    opacity: 0,
+    duration: animationDuration * 2,
+});
 
 welcomeTL.from(
     ".tourdesc__date",
